@@ -1,0 +1,148 @@
+:root {
+  --bg: #f4efe9;
+  --panel: #fffdfb;
+  --ink: #1f1b1a;
+  --muted: #5a524e;
+  --accent: #b75d5d;
+  --accent-soft: #f3dcdc;
+  --line: #e4d9d1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #f7f1ed 0%, #efe4df 100%);
+  color: var(--ink);
+}
+
+.page {
+  max-width: 980px;
+  margin: 40px auto;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 45px rgba(31, 27, 26, 0.08);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+  padding: 42px 52px 24px;
+  background: linear-gradient(135deg, #1f1b1a 0%, #3e302f 100%);
+  color: white;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  letter-spacing: 0.18em;
+  font-size: 0.74rem;
+  color: #f3dcdc;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.1;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  font-size: 0.92rem;
+  color: #f7e6e6;
+}
+
+.content {
+  padding: 28px 52px 52px;
+}
+
+section {
+  margin-bottom: 32px;
+}
+
+h2 {
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: 2px solid var(--line);
+}
+
+p,
+li,
+span {
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.job {
+  margin-bottom: 20px;
+}
+
+.job-header,
+.edu {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.job-header h3,
+.edu h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.12rem;
+}
+
+.company {
+  margin: 6px 0 8px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills span {
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  border: 1px solid #f0c9c9;
+  color: #5b2e2e;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .topbar,
+  .content {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact {
+    align-items: flex-start;
+  }
+}
